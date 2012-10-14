@@ -1,3 +1,5 @@
 *~
 tramp
 elpa/*
+eshell/history
+eshell/lastdir

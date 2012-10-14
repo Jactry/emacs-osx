@@ -3,7 +3,7 @@
 
 ;; 用'y/n/p' 代替 'yes/no/p'
 (fset 'yes-or-no-p 'y-or-n-p)
-;; 不显示工具栏
+;; 禁用工具栏
 (tool-bar-mode -1)
 (global-font-lock-mode t)
 (set-frame-font "Mono 14")

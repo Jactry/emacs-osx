@@ -24,7 +24,7 @@
                                        " # " " >>> ")))
 )
 
-;; 不全设置
+;; 补全设置
 (defun pcmpl-package-cache (name)
 (unless (equal name "")
 (split-string (shell-command-to-string
