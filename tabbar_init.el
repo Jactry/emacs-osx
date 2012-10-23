@@ -1,0 +1,29 @@
+(provide 'tabbar_init)
+
+(require 'tabbar)
+(tabbar-mode 1)
+
+(set-face-attribute 'tabbar-default nil
+		    :family "Mono"
+		    :background "Black"
+		    :foreground "Gray"
+		    :height 1.0
+                    )
+;; 设置左边按钮外观
+(set-face-attribute 'tabbar-button nil 
+		    :inherit 'tabbar-default
+                    :box '(:line-width 1 :color "Black")
+                    )
+;; 设置当前tab外观
+(set-face-attribute 'tabbar-selected nil
+		    :inherit 'tabbar-default
+		    :foreground "White"
+		    :background "DrakGray"
+		    :weight 'bold
+		    )
+;; 设置非当前tab外观
+(set-face-attribute 'tabbar-unselected nil
+                    :inherit 'tabbar-default
+                    :foreground "White"
+                    :background "DrakGray"
+                    )

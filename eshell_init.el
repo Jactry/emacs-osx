@@ -1,6 +1,6 @@
 (provide 'eshell_init)
 
-(setq shell-file-name "/usr/bin/zsh")
+;;(setq shell-file-name "/usr/bin/zsh")
 ;; 命令别名
 (setq eshell-aliases-file "~/.emacs.d/eshell/alias")
 ;; eshell中'em'打开文件

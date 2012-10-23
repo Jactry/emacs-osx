@@ -1,1 +1,2 @@
+alias b  $*
 alias l ls -all $*

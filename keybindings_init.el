@@ -8,3 +8,5 @@
   )
 
 (global-set-key (kbd "C-x C-x") 'eshell)
+(global-set-key [(control e)] 'tabbar-backward)
+(global-set-key [(control q)] 'tabbar-forward)

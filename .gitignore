@@ -3,3 +3,4 @@ tramp
 elpa/*
 eshell/history
 eshell/lastdir
+.DS_Store

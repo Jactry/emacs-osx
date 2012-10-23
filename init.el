@@ -1,5 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'custom-theme-load-path "~/.emacs.d/color-theme")
+(add-to-list 'load-path "~/.emacs.d/elpa")
 
 ;; 用'y/n/p' 代替 'yes/no/p'
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -14,6 +14,8 @@
 (require 'keybindings_init)
 ;; eshell设置
 (require 'eshell_init)
+;; tabbar设置
+(require 'tabbar_init)
 (require 'python)
 (require 'org-install)
 
@@ -32,4 +34,8 @@
 (setq line-number-mode t)
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
 ;; color-theme设置
-(load-theme' solarized-dark t)
+(require 'color-theme)
+(color-theme-initialize)
+(load-file "~/.emacs.d/themes/color-theme-molokai.el")
+(color-theme-molokai)
+
