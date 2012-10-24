@@ -1,12 +1,14 @@
 (add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/elpa")
 
 ;; 用'y/n/p' 代替 'yes/no/p'
 (fset 'yes-or-no-p 'y-or-n-p)
+;; 默认窗口大小
+(set-frame-width (selected-frame) 90)
+(set-frame-height (selected-frame) 38)
 ;; 禁用工具栏
 (tool-bar-mode -1)
 (global-font-lock-mode t)
-(set-frame-font "Mono 14")
+(set-frame-font "Menlo 14")
 
 ;; 编辑设置
 (require 'edit_init)
@@ -38,4 +40,11 @@
 (color-theme-initialize)
 (load-file "~/.emacs.d/themes/color-theme-molokai.el")
 (color-theme-molokai)
+
+;; weibo 设置
+(add-to-list 'load-path "~/.emacs.d/weibo")
+(require 'weibo)
+
+;; auto-complete 设置
+(require 'auto-complete_init)
 

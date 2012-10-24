@@ -18,12 +18,12 @@
 (set-face-attribute 'tabbar-selected nil
 		    :inherit 'tabbar-default
 		    :foreground "White"
-		    :background "DrakGray"
+		    :background "Black"
 		    :weight 'bold
 		    )
 ;; 设置非当前tab外观
 (set-face-attribute 'tabbar-unselected nil
                     :inherit 'tabbar-default
-                    :foreground "White"
-                    :background "DrakGray"
+                    :foreground "Gray"
+                    :background "Black"
                     )
