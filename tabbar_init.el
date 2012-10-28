@@ -3,6 +3,17 @@
 (require 'tabbar)
 (tabbar-mode 1)
 
+;; 所有buffer都在同一组
+(setq tabbar-buffer-groups-function
+      (lambda () (list "All Buffers")))
+
+(setq tabbar-buffer-list-function
+      (lambda ()
+        (remove-if
+	 (lambda(buffer)
+	   (find (aref (buffer-name buffer) 0) " *"))
+	 (buffer-list))))
+
 (set-face-attribute 'tabbar-default nil
 		    :family "Mono"
 		    :background "Black"
