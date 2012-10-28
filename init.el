@@ -51,6 +51,6 @@
 ;; auto-complete 设置
 (require 'auto-complete_init)
 
-
+;; Markdown 模式
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
