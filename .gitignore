@@ -4,3 +4,5 @@ elpa/*
 eshell/history
 eshell/lastdir
 .DS_Store
+\#*\#
+ac-comphist.dat

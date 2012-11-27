@@ -21,7 +21,6 @@
 ;; tabbar设置
 (require 'tabbar_init)
 (require 'python)
-(require 'org-install)
 (require 'cedet)
 
 ;; 显示时间
@@ -54,3 +53,19 @@
 ;; Markdown 模式
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.md" . markdown-mode) auto-mode-alist))
+
+(dolist (dir (list"/usr/local/bin"))
+(when (and (file-exists-p dir) (not (member dir exec-path)))
+(setenv "PATH" (concat dir ":" (getenv "PATH")))
+(setq exec-path (append (list dir) exec-path))))
+(require 'evernote-mode)
+(put 'set-goal-column 'disabled nil)
+
+;; iimage mode
+(autoload 'iimage-mode "iimage" "Support Inline image minor mode." t)
+(autoload 'turn-on-iimage-mode "iimage" "Turn on Inline image minor mode." t)
+(add-hook 'org-mode-hook
+  (lambda () (setq truncate-lines nil)))
+
+(require 'c_init)
+(add-hook 'c-mode-common-hook 'c_init)

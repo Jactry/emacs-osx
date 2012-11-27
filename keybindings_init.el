@@ -12,3 +12,5 @@
 (global-set-key [(control q)] 'tabbar-forward)
 (global-set-key (kbd "C-=") 'weibo-timeline)
 
+(require 'guru-mode)
+(guru-global-mode)

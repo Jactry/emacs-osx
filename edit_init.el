@@ -4,22 +4,18 @@
 (transient-mark-mode 1)
 ;; 光标显示为竖线
 (setq-default cursor-type 'bar)
+;; 用点标记空格 美元号标记过行
+(require 'whitespace)
+(global-whitespace-mode t)
+;; 高亮当前行
+(require 'highlight-current-line)
+(highlight-current-line-on t)
+(set-face-background 'highlight-current-line-face "black")
 ;; 对应闭符号高亮显示
 (show-paren-mode 1)
 
-;; 符号补全  
-(setq skeleton-pair-alist  
-      '((?\" _ "\"" >)
-        (?\' _ "\'" >)
-        (?\( _ ")" >)
-        (?\[ _ "]" >)
-        (?\{ _ "}" >)))
-(setq skeleton-pair t)
-(global-set-key (kbd "\"")  'skeleton-pair-insert-maybe)
-(global-set-key (kbd "\'")  'skeleton-pair-insert-maybe)
-(global-set-key (kbd "(") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "[") 'skeleton-pair-insert-maybe)
-(global-set-key (kbd "{")  'skeleton-pair-insert-maybe)
+;; 自动补全括号
+(electric-pair-mode)
 
 ;; 高亮光标处变量名
 (require 'auto-highlight-symbol)
