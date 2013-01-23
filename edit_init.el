@@ -6,7 +6,8 @@
 (setq-default cursor-type 'bar)
 ;; 用点标记空格 美元号标记过行
 (require 'whitespace)
-(global-whitespace-mode t)
+(whitespace-turn-on)
+;;(global-whitespace-mode t)
 ;; 高亮当前行
 (require 'highlight-current-line)
 (highlight-current-line-on t)

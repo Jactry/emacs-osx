@@ -69,3 +69,4 @@
 
 (require 'c_init)
 (add-hook 'c-mode-common-hook 'c_init)
+(put 'upcase-region 'disabled nil)
