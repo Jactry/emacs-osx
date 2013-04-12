@@ -6,9 +6,11 @@
 (set-frame-width (selected-frame) 90)
 (set-frame-height (selected-frame) 38)
 ;; 禁用工具栏
-(tool-bar-mode -1)
+(tool-bar-mode 0)
+;; 禁用菜单
+(menu-bar-mode 0)
 ;; 禁用滚动条
-(set-scroll-bar-mode nil)
+(set-scroll-bar-mode 0)
 (global-font-lock-mode t)
 (set-frame-font "Menlo 14")
 

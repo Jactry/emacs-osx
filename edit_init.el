@@ -11,7 +11,7 @@
 ;; 高亮当前行
 (require 'highlight-current-line)
 (highlight-current-line-on t)
-(set-face-background 'highlight-current-line-face "black")
+(set-face-background 'highlight-current-line-face "blue")
 ;; 对应闭符号高亮显示
 (show-paren-mode 1)
 
@@ -23,3 +23,6 @@
 (global-auto-highlight-symbol-mode t)
 (global-set-key (kbd "C-,") 'ahs-edit-mode)
 
+(defun insert-current_time ()
+  (interactive)
+  (insert (format-time-string "%Y-%m-%d %H:%M:%S" (current-time))))
