@@ -39,11 +39,6 @@
 ;; 左侧标行
 (setq line-number-mode t)
 (add-hook 'find-file-hook (lambda () (linum-mode 1)))
-;; color-theme设置
-(require 'color-theme)
-(color-theme-initialize)
-(load-file "~/.emacs.d/plugins/themes/color-theme-molokai.el")
-(color-theme-molokai)
 
 ;; weibo 设置
 (add-to-list 'load-path "~/.emacs.d/plugins/weibo")
@@ -72,3 +67,9 @@
 (require 'c_init)
 (add-hook 'c-mode-common-hook 'c_init)
 (put 'upcase-region 'disabled nil)
+
+;;color-theme设置
+(require 'color-theme)
+(load-file "~/.emacs.d/plugins/themes/color-theme-tomorrow.el")
+(color-theme-initialize)
+(color-theme-tomorrow-night)
