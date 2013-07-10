@@ -12,6 +12,7 @@
 (global-set-key (kbd "C-=") 'weibo-timeline)
 (global-set-key (kbd "C-c c") 'comment-or-uncomment-region)
 (global-set-key (kbd "C-x M-d") 'insert-current_time)
+(global-set-key (kbd "C-c g") 'goto-line)
 
 (require 'guru-mode)
 (guru-global-mode)

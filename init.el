@@ -12,8 +12,7 @@
 ;; 禁用滚动条
 (set-scroll-bar-mode 0)
 (global-font-lock-mode t)
-(set-frame-font "Menlo 14")
-
+(set-frame-font "Andale Mono 14")
 ;; 编辑设置
 (require 'edit_init)
 ;; 按键绑定设置
@@ -73,3 +72,10 @@
 (load-file "~/.emacs.d/plugins/themes/color-theme-tomorrow.el")
 (color-theme-initialize)
 (color-theme-tomorrow-night)
+(defun color-theme-tomorrow-night ()
+  (interactive)
+  (color-theme-tomorrow-night)
+  (set-face-attribute 'fringe nil :background "#000")
+  (set-face-attribute 'linum nil :background "#CCC"))
+(require 'generic-x)
+
