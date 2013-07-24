@@ -23,7 +23,7 @@
 (require 'tabbar_init)
 (require 'python)
 (require 'cedet)
-
+(require 'modeline_init)
 ;; 显示时间
 (display-time-mode 1)
 ;; 24时格式
@@ -67,7 +67,7 @@
 (add-hook 'c-mode-common-hook 'c_init)
 (put 'upcase-region 'disabled nil)
 
-;;color-theme设置
+;; color-theme设置
 (require 'color-theme)
 (load-file "~/.emacs.d/plugins/themes/color-theme-tomorrow.el")
 (color-theme-initialize)
@@ -78,4 +78,3 @@
   (set-face-attribute 'fringe nil :background "#000")
   (set-face-attribute 'linum nil :background "#CCC"))
 (require 'generic-x)
-
