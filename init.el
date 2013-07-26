@@ -23,7 +23,10 @@
 (require 'tabbar_init)
 (require 'python)
 (require 'cedet)
-(require 'modeline_init)
+;; mode-line 设置
+(require 'smart-mode-line)
+(if after-init-time (sml/setup)
+  (add-hook 'after-init-hook 'sml/setup))
 ;; 显示时间
 (display-time-mode 1)
 ;; 24时格式
