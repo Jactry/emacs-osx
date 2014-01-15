@@ -69,3 +69,8 @@
 
 (require 'smex)
 (smex-initialize)
+
+(require 'rainbow-mode)
+(define-globalized-minor-mode global-rainbow-mode rainbow-mode
+  (lambda () (rainbow-mode 1)))
+(global-rainbow-mode t)

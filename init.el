@@ -29,6 +29,14 @@
   (add-hook 'after-init-hook 'sml/setup))
 
 (require 'switch-window)
+
+(require 'git_init)
+;; Markdown mode 设置
+(autoload 'markdown-mode "markdown-mode.el"
+    "Major mode for editing Markdown files" t)
+(setq auto-mode-alist
+    (cons '("\\.markdown" . markdown-mode) auto-mode-alist))
+
 ;; 显示时间
 (display-time-mode 1)
 ;; 24时格式
@@ -53,4 +61,4 @@
 
 (set-frame-font "Cosmic Sans Neue Mono 14")
 
-(desktop-save-mode 1)
+(desktop-save-mode t)
