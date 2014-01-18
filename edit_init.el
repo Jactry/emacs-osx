@@ -74,3 +74,9 @@
 (define-globalized-minor-mode global-rainbow-mode rainbow-mode
   (lambda () (rainbow-mode 1)))
 (global-rainbow-mode t)
+
+(setq tab-width 4)
+(setq-default indent-tabs-mode nil)
+
+(require 'clojure-mode)
+(add-hook 'clojure-mode-hook 'clojure-mode)
