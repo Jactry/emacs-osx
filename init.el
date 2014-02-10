@@ -31,6 +31,7 @@
 (require 'switch-window)
 
 (require 'git_init)
+
 ;; Markdown mode 设置
 (autoload 'markdown-mode "markdown-mode.el"
     "Major mode for editing Markdown files" t)
@@ -62,3 +63,5 @@
 (set-frame-font "Cosmic Sans Neue Mono 14")
 
 (desktop-save-mode t)
+
+(require 'cedet_init)

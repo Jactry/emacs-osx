@@ -31,6 +31,7 @@
 (require 'whitespace)
 (whitespace-turn-on)
 (global-whitespace-mode t)
+(setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
 
 (add-to-list 'load-path "~/.emacs.d/plugins/smartparens/")
 (require 'smartparens)
