@@ -60,7 +60,7 @@
 (load-file "~/.emacs.d/plugins/themes/monokai-theme.el")
 (load-theme 'monokai t)
 
-(set-frame-font "Cosmic Sans Neue Mono 14")
+(set-frame-font "Fantasque Sans Mono 14")
 
 (desktop-save-mode t)
 
