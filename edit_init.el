@@ -76,8 +76,10 @@
   (lambda () (rainbow-mode 1)))
 (global-rainbow-mode t)
 
-(setq tab-width 4)
-(setq-default indent-tabs-mode nil)
+(setq-default c-basic-offset 4
+              tab-width 4
+              indent-tabs-mode nil)
+
 
 (require 'clojure-mode)
 (add-hook 'clojure-mode-hook 'clojure-mode)
