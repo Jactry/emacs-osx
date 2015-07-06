@@ -1,5 +1,5 @@
-(add-to-list 'load-path "~/.emacs.d")
-(add-to-list 'load-path "~/.emacs.d/plugins")
+(add-to-list 'load-path "~/.emacs.d/lisp")
+(add-to-list 'load-path "~/.emacs.d/lisp/plugins")
 
 ;; 用'y/n/p' 代替 'yes/no/p'
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -57,7 +57,7 @@
 (setq inhibit-startup-message t)
 
 ;; 主题设置
-(load-file "~/.emacs.d/plugins/themes/monokai-theme.el")
+(load-file "~/.emacs.d/lisp/plugins/themes/monokai-theme.el")
 (load-theme 'monokai t)
 
 (set-frame-font "Ubuntu Mono 14")
