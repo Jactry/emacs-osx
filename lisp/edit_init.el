@@ -83,3 +83,12 @@
 
 (require 'clojure-mode)
 (add-hook 'clojure-mode-hook 'clojure-mode)
+
+(setq hs-allow-nesting t)
+(add-hook 'c-mode-common-hook (lambda () (hs-minor-mode 1)))
+(add-hook 'emacs-lisp-mode-hook (lambda() (hs-minor-mode 1)))
+(add-hook 'tcl-mode-hook (lambda () (hs-minor-mode 1)))
+(global-set-key (kbd "C-c h") 'hs-hide-block)
+(global-set-key (kbd "C-c s") 'hs-show-block)
+(global-set-key (kbd "C-c , h") 'hs-hide-all)
+(global-set-key (kbd "C-c , s") 'hs-show-all)
