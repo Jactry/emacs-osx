@@ -28,10 +28,15 @@
   (insert (format-time-string "%Y-%m-%d %H:%M:%S" (current-time))))
 
 ;; 用点标记空格 美元号标记过行
-;; (require 'whitespace)
-;; (whitespace-turn-on)
-;; (global-whitespace-mode t)
-;; (setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
+(require 'whitespace)
+(whitespace-turn-on)
+(global-whitespace-mode t)
+(setq whitespace-style (quote (spaces tabs newline space-mark tab-mark newline-mark)))
+(setq whitespace-display-mappings
+      '(
+        (newline-mark 10 [182 10]) ; 10 LINE FEED
+        (tab-mark 9 [8677 9] [92 9])
+        ))
 
 (add-to-list 'load-path "~/.emacs.d/lisp/plugins/smartparens/")
 (require 'smartparens)
@@ -92,3 +97,8 @@
 (global-set-key (kbd "C-c s") 'hs-show-block)
 (global-set-key (kbd "C-c , h") 'hs-hide-all)
 (global-set-key (kbd "C-c , s") 'hs-show-all)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/plugins/")
+(autoload 'ace-jump-mode "ace-jump-mode"
+  "Emacs quick move minor mode" t)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
