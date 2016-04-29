@@ -7,7 +7,7 @@
 ;; 高亮当前行
 (require 'highlight-current-line)
 (highlight-current-line-on t)
-(set-face-background 'highlight-current-line-face "blue")
+(set-face-background 'highlight-current-line-face "DeepSkyBlue")
 ;; 对应闭符号高亮显示
 (show-paren-mode)
 

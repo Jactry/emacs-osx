@@ -25,8 +25,13 @@
 
 ;; mode-line 设置
 (require 'smart-mode-line)
+(rich-minority-mode 1)
 (if after-init-time (sml/setup)
   (add-hook 'after-init-hook 'sml/setup))
+ (require 'smart-mode-line)
+(require 'smart-mode-line-powerline-theme)
+(setq sml/no-confirm-load-theme t)
+(sml/apply-theme 'powerline)
 
 (require 'switch-window)
 
