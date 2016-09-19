@@ -1,10 +1,8 @@
 (provide 'cedet_init)
 
-(load-file "~/.emacs.d/lisp/plugins/cedet/common/cedet.el")
 (require 'cedet)
 (global-ede-mode 1)
-(semantic-load-enable-code-helpers)
-(global-srecode-minor-mode 1)
+(semantic-mode 1)
 
 (global-set-key (kbd "C-c j") 'semantic-ia-fast-jump)
 (global-set-key (kbd "C-c b")
