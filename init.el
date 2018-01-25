@@ -70,3 +70,5 @@
 (desktop-save-mode t)
 
 (require 'cedet_init)
+
+(setf (frame-parameter nil 'alpha) 92)
