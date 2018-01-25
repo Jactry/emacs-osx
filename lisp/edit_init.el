@@ -106,3 +106,6 @@
 (require 'auto-complete)
 
 (require 'go-mode-autoloads)
+
+(require 'cython-mode)
+(add-hook 'cython-mode-hook 'cython-mode)
