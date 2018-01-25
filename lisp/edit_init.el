@@ -109,6 +109,7 @@
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 (require 'auto-complete)
+(global-auto-complete-mode t)
 
 (require 'go-mode-autoloads)
 
