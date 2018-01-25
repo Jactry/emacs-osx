@@ -81,6 +81,11 @@
   (lambda () (rainbow-mode 1)))
 (global-rainbow-mode t)
 
+(require 'rainbow-delimiters)
+(define-globalized-minor-mode global-rainbow-delimiters-mode rainbow-delimiters-mode
+  (lambda () (rainbow-delimiters-mode 1)))
+(global-rainbow-delimiters-mode t)
+
 (setq-default c-basic-offset 4
               tab-width 4
               indent-tabs-mode nil)
