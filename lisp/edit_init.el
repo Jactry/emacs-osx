@@ -115,3 +115,10 @@
 
 (require 'cython-mode)
 (add-hook 'cython-mode-hook 'cython-mode)
+
+(semantic-mode 1)
+(require 'semantic/bovine/c nil 'noerror)
+(load-file "~/.emacs.d/lisp/plugins/zjl-hl/highlight.el")
+(load-file "~/.emacs.d/lisp/plugins/zjl-hl/region-list-edit.el")
+(load-file "~/.emacs.d/lisp/plugins/zjl-hl/zjl-hl.el")
+(zjl-hl-enable-global 'c-mode)
