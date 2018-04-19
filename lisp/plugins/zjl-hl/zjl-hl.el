@@ -144,10 +144,10 @@ When nil, do not apply above two assumptions, most Macro won't be highlighted"
 (defface zjl-hl-function-call-face
   '((((class color)
       (background dark))
-     (:foreground "#e566d7" :bold t))
+     (:foreground "#87D700" :bold nil))
     (((class color)
       (background light))
-     (:foreground "#008024" :bold t :italic nil))
+     (:foreground "#008024" :bold nil :italic nil))
     (t()))
   "*Font lock mode face for functioin calling."
   :group 'zjl-hl-faces)
